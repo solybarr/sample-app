@@ -10,10 +10,10 @@
               <%= image_tag(product.image_url, class: "img-responsive") %>
             <% end %>
           </figure>
-            <%  if (product.color != nil) 
-                  theColor = product.color
-                else
+            <%  if ((product.color == nil) || (product.color.rstrip == ""))
                   theColor = "N/A"
+                else
+                  theColor = product.color
                 end  
             %>
           <p>Color: <%= theColor %><br>
