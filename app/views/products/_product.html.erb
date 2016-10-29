@@ -1,0 +1,20 @@
+
+        <div class="col-md-4">
+          <h3><%= product.name %></h3>
+          <figure>
+            <% if (product.image_url != nil) %>
+              <%= image_tag(product.image_url, class: "img-responsive") %>
+            <% end %>
+          </figure>
+            <%  if ((product.color == nil) || (product.color.rstrip == ""))
+                  theColor = "N/A"
+                else
+                  theColor = product.color
+                end  
+            %>
+          <p>Color: <%= theColor %><br>
+            <%= product.description %>
+          </p>
+          <p><%= link_to 'View More', product, class: "btn btn-default large" %></p>
+
+        </div>
