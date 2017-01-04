@@ -12,7 +12,9 @@
                   theColor = product.color
                 end  
             %>
-          <p>Color: <%= theColor %><br>
+          <p>
+            <strong>Price:</strong> <%= number_to_currency(product.price) %><br>
+            <strong>Color:</strong> <%= theColor %><br>
             <%= product.description %>
           </p>
           <p><%= link_to 'View More', product, class: "btn btn-default large" %></p>
